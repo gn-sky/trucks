@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "trucks"
+  "defaultProject": "trucks",
+  "cli": {
+    "analytics": "50d32ffc-e185-43cb-8221-5c8845a3521c"
+  }
 }

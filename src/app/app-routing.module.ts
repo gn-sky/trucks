@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { TruckListComponent } from './truck/truck-list/truck-list.component';
 
 const routes: Routes = [
-  { path: '', component: TruckListComponent },
+  { path: 'trucks', loadChildren: () => import('./truck/truck.module').then(m => m.TruckModule) },
+  { path: '**', redirectTo: 'trucks' },
+  // TODO: add page not found
   // { path: '**', component: PageNotFoundComponent }
 ];
 

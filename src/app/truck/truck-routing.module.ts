@@ -3,11 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { TruckListComponent } from './truck-list/truck-list.component';
 
 const routes: Routes = [
-  { path: "trucks", component: TruckListComponent }
+  { path: '', component: TruckListComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forChild(routes) ],
+  exports: [ RouterModule ]
 })
 export class TruckRoutingModule { }

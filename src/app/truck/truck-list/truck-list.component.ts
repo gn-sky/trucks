@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ITruck } from '../truck';
+import { TruckService } from '../truck.service';
 
 @Component({
   selector: 'app-truck-list',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TruckListComponent implements OnInit {
 
-  constructor() { }
+  trucks: any;
+
+  constructor(
+    private TruckService: TruckService
+  ) { }
 
   ngOnInit(): void {
+    this.trucks = this.TruckService.getTrucks();
   }
 
 }

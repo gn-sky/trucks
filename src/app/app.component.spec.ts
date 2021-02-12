@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('trucks');
   });
 
-  it('should render title', () => {
+  it('should render welcome', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('trucks app is running!');
+    expect(compiled.querySelector('.toolbar span').textContent).toContain('Welcome');
   });
 });
